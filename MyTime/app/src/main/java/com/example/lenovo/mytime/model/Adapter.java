@@ -18,7 +18,7 @@ public class Adapter extends BaseAdapter  {
     private LayoutInflater inflater;
 
     public Adapter(Context ct, List<People> people) {
-        // TODO Auto-generated constructor stub
+
         this.people = people;
         this.ct = ct;
         inflater = (LayoutInflater) ct.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -26,25 +26,25 @@ public class Adapter extends BaseAdapter  {
 
     @Override
     public int getCount() {
-        // TODO Auto-generated method stub
+
         return people.size();
     }
 
     @Override
     public Object getItem(int position) {
-        // TODO Auto-generated method stub
+
         return people.get(position);
     }
 
     @Override
     public long getItemId(int position) {
-        // TODO Auto-generated method stub
+
         return position;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // TODO Auto-generated method stub
+
         People p = people.get(position);
         if(convertView==null){
             convertView = inflater.inflate(R.layout.people_item, null);

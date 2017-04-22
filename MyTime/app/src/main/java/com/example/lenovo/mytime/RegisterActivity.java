@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class RegisterActivity extends Activity
@@ -49,6 +50,8 @@ public class RegisterActivity extends Activity
             String resultCity = data.getString("city");
             // 修改city文本框的内容
             city.setText(resultCity);
+            Toast toast=Toast.makeText(RegisterActivity.this,"您选择的城市为"+resultCity ,Toast.LENGTH_SHORT);
+            toast.show();
         }
     }
 }

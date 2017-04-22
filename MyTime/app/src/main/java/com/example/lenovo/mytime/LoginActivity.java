@@ -2,6 +2,8 @@ package com.example.lenovo.mytime;
 
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,9 +14,13 @@ import static android.widget.AdapterView.OnItemClickListener;
 import static android.widget.AdapterView.OnItemSelectedListener;
 
 import android.widget.CompoundButton;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.PopupMenu;
+import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
 import android.widget.Switch;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,6 +32,8 @@ public class LoginActivity extends Activity
 {
     Switch sw;
     ListView list;
+    PopupMenu popup = null;
+
     private String[] names = new String[]
     { "群助手", "苏轼", "李白"};
     private String[] descs = new String[]
@@ -77,6 +85,7 @@ public class LoginActivity extends Activity
         list.setAdapter(simpleAdapter);
 
         // 为ListView的列表项的单击事件绑定事件监听器
+        //以后待补充的功能
 
         //switcher开关
         sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -84,7 +93,7 @@ public class LoginActivity extends Activity
             @Override
             public void onCheckedChanged(CompoundButton buttonView,
                                          boolean isChecked) {
-          //控制列表的显示和隐藏
+                //控制列表的显示和隐藏
                 if (isChecked) {
                      sw.setChecked(true);
                      list.setVisibility(View.VISIBLE);
@@ -96,6 +105,60 @@ public class LoginActivity extends Activity
             }
         });
 
+    }
+
+    public void onPopupButtonClick(View button)
+    {
+        // 创建PopupMenu对象
+        popup = new PopupMenu(this, button);
+        // 将R.menu.popup_menu菜单资源加载到popup菜单中
+        getMenuInflater().inflate(R.menu.popup_menu, popup.getMenu());
+        // 为popup菜单的菜单项单击事件绑定事件监听器
+        popup.setOnMenuItemClickListener(
+                new PopupMenu.OnMenuItemClickListener()
+                {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item)
+                    {
+
+
+                        return true;
+                    }
+                });
+        popup.show();
+    }
+
+    public void onCustomViewClick(View source)
+    {
+        // 装载界面布局文件
+        LinearLayout loginForm = (LinearLayout)getLayoutInflater()
+                .inflate( R.layout.font, null);
+        new AlertDialog.Builder(this)
+                // 设置对话框的标题
+                .setTitle("设置字体大小")
+                // 设置对话框显示的View对象
+                .setView(loginForm)
+                // 为对话框设置一个“确定”按钮
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog,
+                                        int which) {
+                        // 此处可执行登录处理
+                    }
+                })
+                // 为对话框设置一个“取消”按钮
+                .setNegativeButton("取消", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog,
+                                        int which)
+                    {
+                        // 取消登录，不做任何事情
+                    }
+                })
+                // 创建并显示对话框
+                .create()
+                .show();
     }
 
 }

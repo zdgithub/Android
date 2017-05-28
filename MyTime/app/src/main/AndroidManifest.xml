@@ -30,6 +30,24 @@
             android:name=".SelectCityActivity"
             android:label="选择城市" >
         </activity>
+        <activity
+            android:name=".MsgActivity"
+            android:label="聊天消息" >
+        </activity>
+        <activity
+            android:name=".AddfActivity"
+            android:label="addFriends" >
+        </activity>
+        <activity
+            android:name=".SearchfActivity"
+            android:label="searchFriends" >
+        </activity>
+
+        <activity
+            android:name=".ResultActivity"
+            android:label="databaseResult" >
+        </activity>
+
     </application>
 
 </manifest>

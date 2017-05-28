@@ -35,7 +35,7 @@ public class LoginActivity extends Activity
     PopupMenu popup = null;
 
     private String[] names = new String[]
-    { "群助手", "苏轼", "李白"};
+    { "杜甫", "苏轼", "李白"};
     private String[] descs = new String[]
             { "有2条未读消息", "好的"
                     , "@全体成员"};
@@ -48,12 +48,12 @@ public class LoginActivity extends Activity
     {
 
         // 添加菜单项
-        MenuItem item1 = menu.add("添加");
-        MenuItem item2 = menu.add("编辑");
-        MenuItem item3 = menu.add("删除");
+        MenuItem item1 = menu.add("添加好友");
+        MenuItem item2 = menu.add("查找好友");
+        MenuItem item3 = menu.add("搜索");
         //为菜单项设置关联的Activity
-        item1.setIntent(new Intent(this , OtherActivity.class));
-        item2.setIntent(new Intent(this , OtherActivity.class));
+        item1.setIntent(new Intent(this , AddfActivity.class));
+        item2.setIntent(new Intent(this , SearchfActivity.class));
         item3.setIntent(new Intent(this , OtherActivity.class));
         return super.onCreateOptionsMenu(menu);
     }
@@ -85,7 +85,19 @@ public class LoginActivity extends Activity
         list.setAdapter(simpleAdapter);
 
         // 为ListView的列表项的单击事件绑定事件监听器
-        //以后待补充的功能
+        list.setOnItemClickListener(new OnItemClickListener()
+        {
+            // 第position项被单击时激发该方法
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id)
+            {
+                System.out.println(names[position]
+                        + "被单击了");
+                Intent intent = new Intent(LoginActivity.this, MsgActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //switcher开关
         sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

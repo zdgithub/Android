@@ -48,6 +48,13 @@
             android:label="databaseResult" >
         </activity>
 
+        <activity
+            android:name=".RobotActivity"
+            android:label="Robot" >
+        </activity>
+
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

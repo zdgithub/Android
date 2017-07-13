@@ -35,7 +35,7 @@ public class LoginActivity extends Activity
     PopupMenu popup = null;
 
     private String[] names = new String[]
-    { "杜甫", "苏轼", "李白"};
+    { "小火苗", "苏轼", "李白"};
     private String[] descs = new String[]
             { "有2条未读消息", "好的"
                     , "@全体成员"};
@@ -92,10 +92,16 @@ public class LoginActivity extends Activity
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id)
             {
-                System.out.println(names[position]
-                        + "被单击了");
-                Intent intent = new Intent(LoginActivity.this, MsgActivity.class);
-                startActivity(intent);
+                if(position==0){
+                    Intent intent = new Intent(LoginActivity.this, RobotActivity.class);
+                    startActivity(intent);
+                }
+                else
+                {
+                    Intent intent = new Intent(LoginActivity.this, MsgActivity.class);
+                    startActivity(intent);
+                }
+
             }
         });
 

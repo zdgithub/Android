@@ -73,7 +73,5 @@ public class SearchfActivity extends Activity
         return result;
     }
 
-
-
 }
 

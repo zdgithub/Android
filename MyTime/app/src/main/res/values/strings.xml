@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">My QQ</string>
-    <string name="action_settings">Settings</string>
-    <string name="insert">添加好友</string>
-    <string name="search">查找</string>
-    <string name="detail">信息</string>
-
-</resources>

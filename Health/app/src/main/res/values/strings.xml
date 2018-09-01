@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Health</string>
+    <string-array name="homepage_tabs">
+        <item>新闻报道</item>
+        <item>健康资讯</item>
+        <item>慢病知识</item>
+        <item>免疫知识</item>
+    </string-array>
+</resources>

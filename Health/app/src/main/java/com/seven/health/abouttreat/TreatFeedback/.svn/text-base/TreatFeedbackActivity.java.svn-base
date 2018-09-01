@@ -1,0 +1,111 @@
+package com.seven.health.abouttreat.TreatFeedback;
+
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.seven.health.R;
+
+/**
+ * Created by Administrator on 2018/8/18.
+ */
+
+public class TreatFeedbackActivity extends AppCompatActivity {
+
+    private ScoreStarLinearLayout mStar;
+    private TextView tvScore;
+    private Button btn_submit;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
+        setContentView(R.layout.treat_feedback);
+
+        mStar=(ScoreStarLinearLayout)findViewById(R.id.starbar);
+        tvScore=(TextView)findViewById(R.id.score);
+        btn_submit=(Button)findViewById(R.id.treat_feedback_submit) ;
+
+        //星级评分
+        mStar.setScore((float)0.0);
+        tvScore.setText(mStar.getScore()+"");
+
+        mStar.setChangeListener(new ScoreStarLinearLayout.ChangeListener(){
+            @Override
+           public void Change(int level){
+                tvScore.setText(mStar.getScore()+"");
+            }
+        });
+
+        btn_submit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                submit_dialog();
+            }
+        });
+    }
+
+    //点击返回键弹出对话框判断是否要退出该界面
+    public boolean onKeyDown(int keyCode, KeyEvent event){
+        if(keyCode==KeyEvent.KEYCODE_BACK && event.getRepeatCount()==0){
+            //弹出自定义对话框
+            back_dialog();
+        }
+        return false;
+    }
+
+    public void back_dialog(){
+        AlertDialog.Builder bulider =new AlertDialog.Builder(TreatFeedbackActivity.this);
+        bulider.setTitle("提示");
+        bulider.setMessage("您的反馈还未提交，请确认是否退出 ？");
+        bulider.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int arg1) {
+                dialog.dismiss();
+                TreatFeedbackActivity.this.finish();
+
+            }
+        });
+        bulider.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int arg1) {
+                // TODO Auto-generated method stub
+                dialog.dismiss();
+            }
+        });
+        bulider.create().show();
+
+    }
+
+    public void submit_dialog(){
+        AlertDialog.Builder bulider =new AlertDialog.Builder(TreatFeedbackActivity.this);
+        bulider.setTitle("提示");
+        bulider.setMessage("确认提交反馈意见");
+        bulider.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int arg1) {
+                Toast.makeText(TreatFeedbackActivity.this, "您的反馈已提交", Toast.LENGTH_LONG).show();
+                dialog.dismiss();
+                TreatFeedbackActivity.this.finish();
+            }
+        });
+        bulider.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int arg1) {
+                // TODO Auto-generated method stub
+                dialog.dismiss();
+            }
+        });
+        bulider.create().show();
+    }
+}

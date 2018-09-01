@@ -1,0 +1,52 @@
+package com.seven.health.abouttreat.TreatRegistered;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
+import android.widget.ListView;
+
+import com.seven.health.R;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+/**
+ * Created by Administrator on 2018/8/20.
+ */
+
+public class RegisterationFormActivity extends AppCompatActivity {
+    private List<RegistrationForm>registrationForms;
+    private ListView listView;
+    private RegisterationFormAdapter adapter;
+    private LayoutInflater inflater;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
+        setContentView(R.layout.treat_registered);
+        //获取ListView对象
+        listView=(ListView)findViewById(R.id.register_list);
+        //获取布局加载对象
+        inflater=getLayoutInflater();
+        //初始化数据
+        initData();
+        //创建自定义adapter对象
+        adapter=new RegisterationFormAdapter(registrationForms,inflater);
+        listView.setAdapter(adapter);
+    }
+
+    //获取数据
+    public void initData(){
+        // https://blog.csdn.net/qq_39189632/article/details/78211045
+        registrationForms=new ArrayList<RegistrationForm>();
+        Date curDate = new Date(System.currentTimeMillis());// 获取当前时间
+        RegistrationForm ex=new RegistrationForm("西京医院","骨科","沈巍","赵云澜",5,curDate,"星期一","上午");
+        RegistrationForm ex1=new RegistrationForm("西京医院","骨科","沈巍","赵云澜",5,curDate,"星期一","上午");
+        RegistrationForm ex2=new RegistrationForm("西京医院","骨科","沈巍","赵云澜",5,curDate,"星期一","上午");
+        registrationForms.add(ex);
+        registrationForms.add(ex1);
+        registrationForms.add(ex2);
+    }
+}

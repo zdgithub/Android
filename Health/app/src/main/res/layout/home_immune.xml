@@ -5,11 +5,14 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <TextView
+    <ListView
+        android:id="@+id/news_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="免疫知识"
-        android:textSize="35sp" />
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:divider="@color/Milk_white"
+        android:dividerHeight="1dp"
+        android:scrollbars="none">
+    </ListView>
 
 </LinearLayout>

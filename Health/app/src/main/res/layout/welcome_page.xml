@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/LightBlue"
+    >
+    <ImageView
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:background="@mipmap/white_logo"
+    android:layout_gravity="center"
+    android:layout_marginTop="130dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="个人健康服务管理平台"
+        android:textAppearance="@style/white_25"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/welcome"
+        android:layout_marginTop="30dp"
+        />
+</LinearLayout>

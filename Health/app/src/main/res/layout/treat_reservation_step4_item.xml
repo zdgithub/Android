@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:descendantFocusability="blocksDescendants"
+    >
+    <LinearLayout
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/treat_reservation_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018-08-21"
+            android:textAppearance="@style/black1_15" />
+        <TextView
+            android:id="@+id/treat_reservation_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="星期三"
+            android:textAppearance="@style/black1_15" />
+        <TextView
+            android:id="@+id/treat_reservation_half"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="上午"
+            android:textAppearance="@style/black1_15" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/treat_record_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已预约"
+            android:textAppearance="@style/black_15" />
+        <TextView
+            android:id="@+id/treat_reservation_reserved"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="18"
+            android:textAppearance="@style/black_15" />
+        <TextView
+            android:id="@+id/treat_record_hospit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="剩余数"
+            android:textAppearance="@style/black_15" />
+        <TextView
+            android:id="@+id/treat_reservation_remain"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textAppearance="@style/black_15" />
+    </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:focusable="false"
+        android:clickable="false"
+        android:id="@+id/treat_reservation_appointable"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/treat_next_step_appear"
+        android:text="可预约"
+        android:textAppearance="@style/white_15"/>
+</LinearLayout>

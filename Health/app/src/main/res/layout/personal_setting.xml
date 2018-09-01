@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/LightBlue"
+        android:gravity="center"
+        android:text="设  置"
+        android:textAppearance="@style/white_25" />
+
+    <!-- 全圆角-->
+    <LinearLayout style="@style/wrap_layout">
+        <LinearLayout style="@style/single_layout">
+            <TextView style="@style/usertext"
+                android:id="@+id/aboutversion"
+                android:text="关于我们"/>
+            <ImageView style="@style/img_arrow"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/treat_next_step_appear"
+        android:text="退出登录"
+        android:textColor="@color/White" />
+
+
+</LinearLayout>

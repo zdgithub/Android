@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@color/LightBlue"
+        android:textAppearance="@style/white_25"
+        android:text="详 细 信 息" />
+
+
+
+    <ListView
+        android:id="@+id/medicine_record_list"
+        android:divider="@color/Milk_white"
+        android:dividerHeight="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:scrollbars="none"
+        >
+    </ListView>
+
+</LinearLayout>

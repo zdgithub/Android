@@ -4,12 +4,61 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/treat_reservation"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/treat_button_appearance_1"
+            android:text="预约挂号"
+            android:textAppearance="@style/white_20" />
+
+        <Button
+            android:id="@+id/treat_register"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/treat_button_appearance_2"
+            android:text="我的挂号"
+            android:textAppearance="@style/white_20" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/treat_medical_record"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/treat_button_appearance_3"
+            android:text="诊疗记录"
+            android:textAppearance="@style/white_20" />
+
+        <Button
+            android:id="@+id/treat_medical_feedback"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/treat_button_appearance_4"
+            android:text="就医反馈"
+            android:textAppearance="@style/white_20" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="这里是自主就诊页面"
-        android:textSize="30sp"
-        />
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@mipmap/hospital" />
 
 </LinearLayout>

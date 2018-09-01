@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@color/LightBlue"
+        android:textAppearance="@style/white_25"
+        android:text="选择主治医师"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <ListView
+            android:id="@+id/treat_doc_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/treat_information_shadow"
+            android:divider="@color/Milk_white"
+            android:dividerHeight="1dp"
+            android:scrollbars="none">
+        </ListView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/LightBlue"
+        android:gravity="center"
+        android:text="我 的 挂 号"
+        android:textAppearance="@style/white_25" />
+
+    <ListView
+        android:id="@+id/treat_register_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:divider="#00000000"
+        android:dividerHeight="10dp"
+        android:scrollbars="none"></ListView>
+</LinearLayout>

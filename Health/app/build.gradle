@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
 
 android {
     compileSdkVersion 25
     buildToolsVersion "28.0.2"
     defaultConfig {
         applicationId "com.seven.health"
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -29,4 +30,18 @@ dependencies {
     testCompile 'junit:junit:4.12'
     //用于tab栏的TabLayout
     compile 'com.android.support:design:26.0.0-alpha1'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile files('libs/glide-3.8.0.jar')
+    compile files('libs/gson-2.8.2.jar')
+    compile files('libs/okhttp-3.11.0.jar')
+    compile files('libs/okio-1.15.0.jar')
+
+}
+
+// 在MobSDK的扩展中注册SMSSDK的相关信息
+MobSDK {
+    appKey "27834d0335b88"
+    appSecret "09ace44ffab86a6bf88a059535c017a7"
+
+    SMSSDK {}
 }

@@ -7,7 +7,22 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="black_10">
+        <item name="android:textColor">#707070</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="red_15">
+        <item name="android:textColor">@color/Red</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="black_15">
+        <item name="android:textColor">#707070</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="white_15">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">15sp</item>
+    </style>
     <style name="white_20">
         <item name="android:textColor">#ffffff</item>
         <item name="android:textSize">20sp</item>
@@ -15,6 +30,14 @@
     <style name="blue_20">
         <item name="android:textColor">#B342B0B1</item>
         <item name="android:textSize">20sp</item>
+    </style>
+    <style name="black_20">
+        <item name="android:textColor">#707070</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="black1_15">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">15sp</item>
     </style>
     <style name="black_25">
         <item name="android:textColor">#707070</item>
@@ -32,12 +55,108 @@
         <item name="android:textColor">#ffffff</item>
         <item name="android:textSize">30sp</item>
     </style>
+    <style name="black_30">
+        <item name="android:textColor">#707070</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+    <style name="black_40">
+        <item name="android:textColor">#707070</item>
+        <item name="android:textSize">45sp</item>
+    </style>
     <style name="blue_45">
         <item name="android:textColor">#B342B0B1</item>
         <item name="android:textSize">45sp</item>
     </style>
+    <style name="blue_15">
+        <item name="android:textColor">#B342B0B1</item>
+        <item name="android:textSize">15sp</item>
+    </style>
     <style name="login_edit_text" >
         <item name="colorControlNormal">#ffffff</item>
         <item name="colorControlActivated">#ffffff</item>
+    </style>
+
+    <!-- 最外层样式 -->
+    2     <style name="wrap_layout">
+    3         <item name="android:orientation">vertical</item>
+    4         <item name="android:layout_height">wrap_content</item>
+    5         <item name="android:layout_width">match_parent</item>
+    6         <item name="android:layout_marginLeft">8dp</item>
+    7         <item name="android:layout_marginRight">8dp</item>
+    8         <item name="android:layout_marginTop">8dp</item>
+    9         <item name="android:padding">1px</item>
+    10         <item name="android:background">@drawable/bg_layout_shape</item>
+    11
+    12     </style>
+    13
+    14     <!-- 共用层样式 -->
+    15     <style name="base_layout">
+    16         <item name="android:orientation">horizontal</item>
+    17          <item name="android:layout_width">match_parent</item>
+    18          <item name="android:layout_height">wrap_content</item>
+    19          <item name="android:paddingTop">16dp</item>
+    20          <item name="android:paddingBottom">16dp</item>
+    21          <item name="android:paddingLeft">12dp</item>
+    22          <item name="android:paddingRight">12dp</item>
+    23         <item name="android:gravity">center_vertical</item>
+    24          <item name="android:focusable">true</item>
+    25         <item name="android:clickable">true</item>
+    26     </style>
+
+
+
+
+    1 <!-- textview样式 -->
+    2     <style name="usertext">
+    3         <item name="android:textSize">16dp</item>
+    4         <item name="android:textColor">#333</item>
+    5         <item name="android:layout_width">wrap_content</item>
+    6         <item name="android:layout_height">wrap_content</item>
+    7         <item name="android:layout_weight">1</item>
+    8     </style>
+    9
+    10
+    11     <!-- 文本右边箭头样式 -->
+    12     <style name="img_arrow">
+    13         <item name="android:layout_width">wrap_content</item>
+    14         <item name="android:layout_height">wrap_content</item>
+    15         <item name="android:src">@drawable/setting_arrow</item>
+    16
+    17     </style>
+    18
+    19
+    20    <!-- view分割线样式 -->
+    21     <style name="bg_line">
+    22         <item name="android:layout_width">match_parent</item>
+    23         <item name="android:layout_height">1px</item>
+    24         <item name="android:background">#ccc</item>
+    25     </style>
+
+
+
+    1  <!-- 上圆角样式 -->
+    2     <style name="top_layout" parent="base_layout">
+    3         <item name="android:background">@drawable/top_layout_selector</item>
+    4     </style>
+    5
+    6
+    7     <!--无圆角样式  -->
+    8     <style name="mid_layout" parent="base_layout">
+    9          <item name="android:background">@drawable/mid_layout_selector</item>
+    10     </style>
+    11
+    12         <!-- 下圆角样式 -->
+    13     <style name="bottom_layout"  parent="base_layout">
+    14           <item name="android:background">@drawable/bottom_layout_selector</item>
+    15     </style>
+    16
+    17     <!-- 全圆角样式 -->
+    18     <style name="single_layout" parent="base_layout">
+    19         <item name="android:background">@drawable/single_layout_selector</item>
+    20     </style>
+
+    <style name="MyEditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/LightBlue</item>
+        <item name="colorControlActivated">@color/LightBlue</item>
     </style>
 </resources>

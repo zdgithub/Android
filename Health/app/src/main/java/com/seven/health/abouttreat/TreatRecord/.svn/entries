@@ -1,0 +1,49 @@
+10
+
+dir
+0
+https://lenovo-pc/svn/HealthProject/Health/app/src/main/java/com/seven/health/abouttreat/TreatRecord
+https://lenovo-pc/svn/HealthProject
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+2487fe40-2224-6a4f-a11c-76c398826930
+
+TreatRecordActivity.java
+file
+
+
+
+add
+
+TreatRecordAdapter.java
+file
+
+
+
+add
+
+TreatRecordInfoActivity.java
+file
+
+
+
+add
+

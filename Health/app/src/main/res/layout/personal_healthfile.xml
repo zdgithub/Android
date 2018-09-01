@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/LightBlue"
+        android:gravity="center"
+        android:text="我 的 健 康 档 案"
+        android:textAppearance="@style/white_25" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="姓名："
+                android:textAppearance="@style/black_15" />
+
+            <TextView
+                android:id="@+id/personal_health_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/black_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="性别："
+                android:textAppearance="@style/black_15" />
+
+            <TextView
+                android:id="@+id/personal_health_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/black_15" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="年龄："
+                android:textAppearance="@style/black_15" />
+
+            <TextView
+                android:id="@+id/personal_health_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/black_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="身高："
+                android:textAppearance="@style/black_15" />
+
+            <TextView
+                android:id="@+id/personal_health_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/black_15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" cm"
+                android:textAppearance="@style/black_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="体重："
+                android:textAppearance="@style/black_15" />
+
+            <TextView
+                android:id="@+id/personal_health_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/black_15" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" kg"
+                android:textAppearance="@style/black_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更新时间："
+                android:textAppearance="@style/black_15" />
+
+            <Spinner
+                android:id="@+id/personal_record_date"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:background="#ffffff"
+                android:textAppearance="@style/black_15" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="有无传染病史："
+            android:textAppearance="@style/black_15" />
+
+        <TextView
+            android:id="@+id/personal_infectious_disease"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/treat_edit_shadow"
+            android:elevation="5dp"
+            android:padding="10dp"
+            android:textAppearance="@style/black_15" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="有无慢病史："
+            android:textAppearance="@style/black_15" />
+
+        <TextView
+            android:id="@+id/personal_chronic"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/treat_edit_shadow"
+            android:elevation="5dp"
+            android:padding="10dp"
+            android:textAppearance="@style/black_15" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="有无遗传病史："
+            android:textAppearance="@style/black_15" />
+
+        <TextView
+            android:id="@+id/personal_genetic"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/treat_edit_shadow"
+            android:elevation="5dp"
+            android:padding="10dp"
+            android:textAppearance="@style/black_15" />
+    </LinearLayout>
+</LinearLayout>

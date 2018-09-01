@@ -3,8 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
-    <!--四个底部fragment通用的标题栏-->
+    <!--标题栏:图标+文字 四个底部Tab公共的标题栏，可以放Logo，这里先不要-->
     <RelativeLayout
         android:id="@+id/top_see"
         android:layout_width="match_parent"
@@ -21,8 +20,8 @@
             android:textColor="#FFFFFF"
             android:textSize="25sp"
             android:visibility="gone" />
-    </RelativeLayout>
 
+    </RelativeLayout>
 
     <FrameLayout
         android:id="@+id/fl_content_page"

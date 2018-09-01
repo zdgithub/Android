@@ -21,7 +21,6 @@ public abstract class BasePageTitleFragment extends Fragment {
     private RelativeLayout mTopsee;
 
     private FrameLayout mFlContentGeneral;
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,18 +31,18 @@ public abstract class BasePageTitleFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
         mGeneralFragment = inflater.inflate(R.layout.base_top_title, container, false); //通用布局
-
         mTvTitleGeneral = (TextView) mGeneralFragment.findViewById(R.id.tv_common_title);
         mTopsee = (RelativeLayout) mGeneralFragment.findViewById(R.id.top_see);
+
         mFlContentGeneral = (FrameLayout) mGeneralFragment.findViewById(R.id.fl_content_page);
 
         View view = initView();
-        mFlContentGeneral.addView(view); //添加fragment对应的页面
+        mFlContentGeneral.addView(view);
 
         return mGeneralFragment;
     }
 
-   // 设置通用标题栏是否显示
+   // 设置顶行标题是否显示
     public void setTitleText(String msg, boolean show){
         mTvTitleGeneral.setText(msg);
         if(show){
@@ -58,7 +57,6 @@ public abstract class BasePageTitleFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
         initData();
     }
 
